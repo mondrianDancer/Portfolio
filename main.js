@@ -52,14 +52,19 @@ const projects = document.querySelectorAll(".project"); //array
 workBtnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) return;
+  //Remove selection from the previous item and select the new one
+  const active = document.querySelector(".category__btn.selected");
+  if (active != null) {
+    active.classList.remove("selected");
+  }
+  e.target.classList.add("selected");
+
   ProjectContainer.classList.add("anim-out");
   setTimeout(() => {
     projects.forEach((projects) => {
-      if (filter === "*" || filter === projects.dataset.type) {
+      if (filter === "*" || filter === projects.dataset.type)
         projects.classList.remove("invisible");
-      } else {
-        projects.classList.add("invisible");
-      }
+      else projects.classList.add("invisible");
     });
     ProjectContainer.classList.remove("anim-out");
   }, 300);
