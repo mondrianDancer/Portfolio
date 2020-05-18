@@ -156,14 +156,24 @@ p {
     border-radius: var(--size-border-radius);
 }
 
+/* Section Common */
+
 .section {
     padding: 50px;
     text-align: center;
+    margin: auto;
+}
+
+.section__container {
     max-width: 1200px;
     margin: auto;
 }
 
 /* About */
+.section__about {
+    padding: 22.5vh 22.5vh;
+}
+
 .about__majors {
     display: flex;
     justify-content: space-between;
@@ -222,4 +232,62 @@ p {
 
 .job__period {
     font-size: var(--font-micro);
+}
+
+/* Skill */
+
+#skills {
+    background-color: var(--color-orange);
+    padding-bottom: 15.5vh;
+}
+
+.skillset {
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+    margin: 20px 0;
+}
+
+.skillset__title {
+    color: var(--color-white);
+}
+
+.skillset__left {
+    background-color: var(--color-dark-grey);
+    flex-basis: 60%;
+    padding: 20px 40px;
+}
+
+.skill {
+    margin-bottom: 8px;
+}
+
+.skill__bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+
+.skill__value {
+    /* width: 50%; */
+    height: 3px;
+    background-color: var(--color-orange);
+}
+
+.skill__description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillset__right {
+    flex-basis: 60%;
+}
+
+.tools {
+    background-color: var(--color-grey);
+}
+
+.tools,
+.etc {
+    padding: 20px;
 }
