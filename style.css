@@ -432,6 +432,28 @@ p {
     color: var(--color-grey-black);
 }
 
+/* Scroll */
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    background-color: var(--color-white);
+    color: var(--color-yellow);
+    border-radius: 50%;
+    border: 1px solid;
+    opacity: 0;
+    transition: var(--animation-duration) ease-in;
+    pointer-events: none;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
     .navbar__toggle-btn {
